@@ -1,0 +1,23 @@
+IAM > Roles > Create Role > CodeDeploy > CodeDeploy > CodeDeployeServiceRole
+
+
+IAM > Create Policy > JSON > Ec2InstanceProfilePolicy
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action":[
+                "s3:Get*",
+                "s3:List*"
+            ],
+            "Effect":"Allow",
+            "Resource":"*"
+        }
+    ]
+}
+
+
+Roles > create role > EC2 > Select ur Use Case > EC2 > Serch For Ec2InstanceProfilePolicy > Checkbox > EC2InstaceProfileRole
+
+EC2 > select any instance > Actions > instance settings > attach or replace IAM role > select EC2InstaceProfileRole > apply
